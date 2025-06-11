@@ -1,0 +1,65 @@
+*{
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/windows11-alt1-wallpaper.webp") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.desktop {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  cursor: default;
+}
+
+.icon img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Barra de tarefas */
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: rgba(30, 30, 30, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.start-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.taskbar-icons img {
+  width: 24px;
+  margin: 0 6px;
+}
+
+.taskbar-clock {
+  color: white;
+  text-align: right;
+  font-size: 12px;
+}

@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+ 
+body {
+    background-image:url(../images/windows11-default-wallpaper-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    height: 100vh;
+}
+ 
+img {
+    float: center;
+    width: 200px;
+    border-radius: 100%;
+}
+ 
+button{
+    padding: 10px 10px;
+    width: 15%;
+}
+ 
+h1 {
+    padding: 30px 30px;
+}

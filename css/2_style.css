@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+ 
+body {
+    background-image:url(../images/windows11-default-wallpaper-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+}
+ 
+.hora {
+    content: "14:40";
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+ 
+.data {
+    content: "11 de junho de 2025";
+    font-size: 24px;
+    margin-top: 10px;
+    color: white;
+}
