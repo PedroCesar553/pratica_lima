@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desktop do Windows</title>
-  <link rel="stylesheet" href="css/4_style.css" />
-</head>
-<body>
-  <div class="desktop">
-    <div class="icon">
-      <img src="images/computer-icon.png" alt="Meu Computador" />
-      <span>Meu Computador</span>
-    </div>
-    <div class="icon">
-      <img src="images/trash-icon.png" alt="Lixeira" />
-      <span>Lixeira</span>
-    </div>
-    <!-- Adicione mais ícones aqui -->
-  </div>
 
-  <div class="taskbar">
-    <div class="start-button">
-      <img src="images/windows-icon.png" alt="Menu Iniciar" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop</title>
+  <link rel="stylesheet" href="css/4_style.css">
+</head>
+
+<body>
+
+  <main class="desktop-area">
+    <div class="container">
+      <div class="icon">
+        <img src="https://img.icons8.com/?size=100&id=LjNe156kndXS&format=png&color=000000" alt="Lixeira">
+        <p>Lixeira</p>
+        <img width="48" height="48" src="https://img.icons8.com/fluency/48/folder-invoices--v1.png" alt="Explore">
+        <p>Documentos</p>
+        <img src="https://img.icons8.com/?size=100&id=ejub91zEY6Sl&format=png&color=000000" alt="Google Chrome">
+        <p>Google<br> Chrome</p>
+        <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" alt="Visual Studio Code">
+        <p>Visual Studio<br> Code</p>
+      </div>
     </div>
-    <div class="taskbar-icons">
-      <img src="images/edge-icon.png" alt="Edge" />
-      <img src="images/folder-icon.png" alt="Explorador de Arquivos" />
-      <!-- outros ícones -->
+  </main>
+
+  <footer>
+    <div class="barra-esquerda">
+      <!-- Deixe vazia ou use para o menu lateral futuramente -->
     </div>
-    <div class="taskbar-clock">
-      <span>14:26</span>
-      <span>11/06/2025</span>
+
+    <div class="barra-centro">
+      <img id="start" src="images/windows-11.png" alt="Iniciar">
+      <img src="https://img.icons8.com/?size=100&id=ejub91zEY6Sl&format=png&color=000000" alt="Chrome">
+      <img src="https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000" alt="VS Code">
+      <img width="48" height="48" src="https://img.icons8.com/fluency/48/folder-invoices--v1.png" alt="Explore">
     </div>
-  </div>
+
+    <div class="barra-direita">
+      <img src="https://img.icons8.com/?size=100&id=PLlw4LevCJrl&format=png&color=000000" alt="Wi-Fi">
+      <img src="https://img.icons8.com/?size=100&id=iWO20ZvCeU53&format=png&color=000000" alt="Som">
+      <img src="https://img.icons8.com/?size=100&id=zddfYtvTqQmM&format=png&color=000000" alt="Bateria">
+      <div id="relogio">
+        <span id="hora">14:21</span>
+        <span id="data">13/06/2025</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function atualizarRelogio() {
+      const agora = new Date();
+      document.getElementById('hora').textContent = agora.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      document.getElementById('data').textContent = agora.toLocaleDateString('pt-BR');
+    }
+
+    setInterval(atualizarRelogio, 1000);
+    atualizarRelogio();
+  </script>
 </body>
+
 </html>

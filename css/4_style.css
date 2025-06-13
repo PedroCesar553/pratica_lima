@@ -1,65 +1,110 @@
-*{
-
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: url("../images/windows11-alt1-wallpaper.webp") no-repeat center center fixed;
-  background-size: cover;
-  font-family: "Segoe UI", sans-serif;
-  height: 100vh;
-  overflow: hidden;
+    background-image: url(../images/windows11-alt1-wallpaper.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Segoe UI", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.desktop {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+main {
+    display: grid;
+    grid-template-columns: repeat(16, 100px);
+    grid-template-rows: auto;
+    gap: 5px;
+    justify-items: center;
+    align-items:flex-start;
+    order: 1;   
 }
 
 .icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80px;
-  color: white;
-  text-shadow: 1px 1px 4px black;
-  cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0px 0px 0px;
 }
 
-.icon img {
-  width: 48px;
-  height: 48px;
+img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
 }
 
-/* Barra de tarefas */
-.taskbar {
-  position: absolute;
+p {
+    font-size: 14px;
+    margin: 5px 0px 20px 0px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+
+footer {
+  position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
-  height: 48px;
-  background: rgba(30, 30, 30, 0.9);
+  width: 100%;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 40px;
+  z-index: 1000;
 }
 
-.start-button img {
-  width: 30px;
-  height: 30px;
+footer img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 
-.taskbar-icons img {
-  width: 24px;
-  margin: 0 6px;
+/* Divisões principais da barra */
+.barra-esquerda,
+.barra-centro,
+.barra-direita {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
 }
 
-.taskbar-clock {
-  color: white;
-  text-align: right;
+/* Centraliza os atalhos no meio */
+.barra-centro {
+  justify-content: center;
+}
+
+/* Alinha ícones à direita (Wi-Fi e relógio) */
+.barra-direita {
+  justify-content: flex-end;
+}
+
+.barra-direita img{
+  width: 20px;
+  height: 20px;
+}
+
+#relogio {
+  display: flex;
+  flex-direction: column;
   font-size: 12px;
+  text-align: right;
+  color: black;
+}
+
+.icon:hover img,
+footer img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+  transition: 0.2s ease;
 }
